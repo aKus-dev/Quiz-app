@@ -1,6 +1,10 @@
 // Global
-@import './global/global.scss';
-@import './global/variables.scss';
+@import './global/global';
+@import './global/variables';
 
 // Utilities
-@import './utilities/bold.scss';
+@import './utilities/bold';
+
+// Screens
+@import './WelcomeScreen/welcome.module'
+

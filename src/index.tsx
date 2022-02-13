@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom';
-import App from './App';
 import './scss/index.scss'
+import { WelcomeScreen } from './screens';
+
 
 ReactDOM.render(
-    <App />,
+    <WelcomeScreen />,
   document.getElementById('root')
 );

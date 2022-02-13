@@ -1,11 +1,11 @@
 interface BoldProps {
-    children: JSX.Element | JSX.Element[];
+    children: string;
 }
 
 export const Bold = ( {children}: BoldProps) => {
   return (
-    <div className="bold">
+    <span className="bold">
         {children}
-    </div>
+    </span>
   )
 }
