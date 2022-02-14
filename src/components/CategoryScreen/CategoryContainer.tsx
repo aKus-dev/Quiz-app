@@ -7,7 +7,9 @@ interface CategoryContainerProps {
 export const CategoryContainer = ({ children }: CategoryContainerProps) => {
   return (
     <div className={styles.container}>
-      {children}
+      <div className={styles.categoriesContainer}>
+        {children}
+      </div>
     </div>
 
   )
