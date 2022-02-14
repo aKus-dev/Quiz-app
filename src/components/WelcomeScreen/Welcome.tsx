@@ -41,12 +41,12 @@ export const Welcome = () => {
                 </motion.div>
             </div>
 
-            <img src="./img/pc.png" alt="PC" id="pc" />
-            <img src="./img/todos.png" alt="Todos" id="todos" />
-            <img src="./img/math.png" alt="Math" id="math" />
-            <img src="./img/planet.png" alt="Planet" id="planet" />
-            <img src="./img/donut.png" alt="Donut" id="donut" />
-            <img src="./img/boxes.png" alt="Boxes" id="boxes" />
+            <img src="./img/pc.png" alt="PC" id={styles.pc} />
+            <img src="./img/todos.png" alt="Todos" id={styles.todos} />
+            <img src="./img/math.png" alt="Math" id={styles.math} />
+            <img src="./img/planet.png" alt="Planet" id={styles.planet} />
+            <img src="./img/donut.png" alt="Donut" id={styles.donut} />
+            <img src="./img/boxes.png" alt="Boxes" id={styles.boxes} />
 
         </div>
     )
