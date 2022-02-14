@@ -1,0 +1,60 @@
+.container {
+    padding: 10rem 0 0 2.5rem;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/img/bg.png);
+    background-size: cover;
+
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkContainer {
+    width: 85%;
+    max-width: 35rem;
+}
+
+.btn {
+    cursor: pointer;
+    transition: 0.35s;
+    text-align: center;
+    display: block;
+    padding: 1rem 0;
+    border-radius: .85rem;
+    font-size: 1.8rem;
+    border: 2px solid transparent;
+    color: var(--white);
+}
+
+.btn1 {
+    background-color: lighten(#211c70, 40%);
+
+    &:hover {
+        background-color: transparent;
+        border-color: lighten(#211c70, 40%);
+        color: lighten(#211c70, 40%);
+    }
+}
+
+.btn2 {
+    background-color: lighten(#211c70, 20%);
+
+    &:hover {
+        background-color: transparent;
+        border-color: lighten(#211c70, 20%);
+        color: lighten(#211c70, 20%);
+    }
+}
+
+.btn3 {
+    background-color: lighten(#211c70, 0%);
+
+    &:hover {
+        background-color: transparent;
+        border-color: lighten(#211c70, 0%);
+        color: lighten(#211c70, 0%);
+    }
+}

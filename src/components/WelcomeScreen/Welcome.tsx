@@ -1,4 +1,4 @@
-import styles from '../../scss/WelcomeScreen/_welcome.module.scss';
+import styles from '../../scss/WelcomeScreen/welcome.module.scss';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Bold } from '../../utilities';
