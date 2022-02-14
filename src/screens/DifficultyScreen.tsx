@@ -1,8 +1,9 @@
-import React from 'react'
-import { Difficulty } from '../components'
+import { Difficulty, DifficultyContainer } from '../components'
 
 export const DifficultyScreen = () => {
   return (
-    <Difficulty />
+    <DifficultyContainer>
+      <Difficulty />
+    </DifficultyContainer>
   )
 }

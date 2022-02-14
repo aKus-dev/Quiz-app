@@ -8,14 +8,14 @@ import {
 export const Difficulty = () => {
 
   return (
-    <div className={styles.container}>
+    <>
       <motion.div
         initial={iFadeinB}
         animate={aFadeinB}
         transition={{...tFadeinB, delay: 0}}
         className={styles.linkContainer}
       >
-        <Link to="#" className={`${styles.btn} ${styles.btn1}`}>Easy</Link>
+        <Link to="/category" className={`${styles.btn} ${styles.btn1}`}>Easy</Link>
       </motion.div>
 
       <motion.div
@@ -24,7 +24,7 @@ export const Difficulty = () => {
         transition={{...tFadeinB, delay: 0.35}}
         className={styles.linkContainer}
       >
-        <Link to="#" className={`${styles.btn} ${styles.btn2}`}>Normal</Link>
+        <Link to="/category" className={`${styles.btn} ${styles.btn2}`}>Normal</Link>
       </motion.div>
 
       <motion.div
@@ -33,8 +33,8 @@ export const Difficulty = () => {
         transition={{...tFadeinB, delay: 0.65}}
         className={styles.linkContainer}
       >
-        <Link to="#" className={`${styles.btn} ${styles.btn3}`}>Hard</Link>
+        <Link to="/category" className={`${styles.btn} ${styles.btn3}`}>Hard</Link>
       </motion.div>
-    </div>
+    </>
   )
 }

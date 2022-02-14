@@ -1,7 +1,9 @@
-import { Welcome } from "../components"
+import { Welcome, WelcomeContainer } from "../components"
 
 export const WelcomeScreen = () => {
   return (
-    <Welcome />
+    <WelcomeContainer>
+      <Welcome />
+    </WelcomeContainer>
   )
 }

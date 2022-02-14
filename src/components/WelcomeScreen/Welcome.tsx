@@ -13,7 +13,7 @@ import {
 export const Welcome = () => {
 
     return (
-        <div className={styles.container}>
+        <>
 
             <div className={styles.infoContainer}>
                 <motion.h1
@@ -48,7 +48,7 @@ export const Welcome = () => {
             <img src="./img/donut.png" alt="Donut" id={styles.donut} />
             <img src="./img/boxes.png" alt="Boxes" id={styles.boxes} />
 
-        </div>
+        </>
     )
 }
 
