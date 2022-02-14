@@ -11,14 +11,10 @@
     align-items: center;
 }
 
-.linkContainer {
-    width: 85%;
-    max-width: 35rem;
-}
-
 .btn {
     cursor: pointer;
-    transition: 0.35s;
+    width: 85%;
+    max-width: 35rem;
     text-align: center;
     display: block;
     padding: 1rem 0;
@@ -32,31 +28,16 @@
     background-color: transparent;
     border-color: lighten(#211c70, 30%);
     color: lighten(#211c70, 30%);
-
-    &:hover {
-        background-color: lighten(#211c70, 30%);
-        color: var(--white);
-    }
 }
 
 .btn2 {
     background-color: transparent;
     border-color: lighten(#211c70, 20%);
     color: lighten(#211c70, 20%);
-
-    &:hover {
-        background-color: lighten(#211c70, 20%);
-        color: var(--white);
-    }
 }
 
 .btn3 {
     background-color: transparent;
     border-color: lighten(#211c70, 0%);
     color: lighten(#211c70, 0%);
-
-    &:hover {
-        background-color: lighten(#211c70, 0%);
-        color: var(--white);
-    }
 }

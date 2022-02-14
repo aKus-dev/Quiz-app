@@ -1,10 +1,11 @@
 
 export interface CategoryProps {
+    id:number;
     categoryName: Categories;
     color: Colors;
 }
 
-type Categories = 
+export type Categories = 
     | 'Books'
     | 'Film'
     | 'Maths'

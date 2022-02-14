@@ -2,7 +2,7 @@
 
 export const tFadeinB = {
     type: "spring",
-    duration: 1
+    duration: 0.8
 }
 
 export const iFadeinB = {
