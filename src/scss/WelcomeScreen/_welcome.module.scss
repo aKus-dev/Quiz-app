@@ -9,7 +9,7 @@
 .infoContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .heading {
@@ -218,6 +218,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .infoContainer {
+        align-items: flex-start;
     }
 
     #pc {

@@ -1,4 +1,5 @@
 import styles from '../../scss/WelcomeScreen/_welcome.module.scss';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Bold } from '../../utilities';
 
@@ -34,9 +35,9 @@ export const Welcome = () => {
                 </motion.p>
 
                 <motion.div initial={iFadeinL} animate={aFadeinL} transition={tFadeinL}>
-                    <a href="/difficulty" className={styles.getStarted}>
+                    <Link to="/difficulty" className={styles.getStarted}>
                         Let's get started
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
 
