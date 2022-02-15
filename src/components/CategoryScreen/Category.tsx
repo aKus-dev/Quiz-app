@@ -4,15 +4,19 @@ import { iFadeinL, aFadeinL, tFadeinL } from '../../animations';
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import { QuizContext } from '../../context/QuizContext';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export const Category = ({ color, categoryName, id }: CategoryProps) => {
 
+    const navigate = useNavigate();
+
     const { setCategory } = useContext(QuizContext);
 
     const handleCategory = () => {
         setCategory(id);
+        navigate('/quiz');
     }
 
     return (

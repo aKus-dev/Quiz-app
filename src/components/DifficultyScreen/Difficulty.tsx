@@ -1,7 +1,7 @@
 import styles from '../../scss/DifficultyScreen/difficulty.module.scss';
 import { motion } from 'framer-motion';
-import { useState, MouseEvent, useContext } from 'react';
-import { iFadeinB, aFadeinB, tFadeinB} from '../../animations';
+import { useState, MouseEvent, useContext, useEffect } from 'react';
+import { iFadeinB, aFadeinB, tFadeinB } from '../../animations';
 import { Difficulties, QuizContext } from '../../context/QuizContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,15 +15,20 @@ export const Difficulty = () => {
   const [delay1, setDealy1] = useState(0.35);
   const [delay2, setDealy2] = useState(0.65);
 
-  setTimeout(() => setDealy1(0), 350)
-  setTimeout(() => setDealy2(0), 650)
+  useEffect(
+    () => {
+      setTimeout(() => setDealy1(0), 350)
+      setTimeout(() => setDealy2(0), 650)
+    }, [setDealy1, setDealy2]
+  )
 
+  // Get context
   const { setDifficulty } = useContext(QuizContext);
-
 
   const handleDificulty = (e: MouseEvent) => {
     const button = e.target as Element;
     const difficult = button.id as Difficulties;
+
     setDifficulty(difficult);
     navigate('/category');
   }
