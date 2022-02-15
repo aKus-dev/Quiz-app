@@ -1,4 +1,8 @@
-{
+interface Props {
+	[key:string]: string
+}
+
+export const entities: Props = {
 	"&AElig;": "Æ",
 	"&#039;": "'",
 	"&AMP;": "&",
@@ -2231,4 +2235,4 @@
 	"&yacute": "ý",
 	"&yen": "¥",
 	"&yuml": "ÿ"
-} 
+}

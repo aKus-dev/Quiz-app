@@ -1,8 +1,8 @@
-import entities from './entities.json'
+import { entities } from './entities'
 
 const entitiesRegex = RegExp(Object.keys(entities).join('|'), 'g');
 
-export function decodeEntities(str) {
+export function decodeEntities(str: string) {
     
     const matches = str.match(entitiesRegex);
     if (!matches) return str;

@@ -5,10 +5,9 @@ import { getQuestions, QuestionsResponse } from '../../helpers/getQuestions';
 import { Question } from '../';
 
 export const Quiz = () => {
-    
+
     const [questions, setQuestions] = useState<QuestionsResponse[]>({} as QuestionsResponse[])
     const { difficulty, category } = useContext(QuizContext);
-    const [actualQuestion, setActualQuestion] = useState(0);
 
     useEffect(
         () => {
@@ -16,13 +15,15 @@ export const Quiz = () => {
                 .then(data => setQuestions(data))
         }, []
     )
-    
 
-    if(JSON.stringify(questions) === '{}') {
+
+    if (JSON.stringify(questions) === '{}') {
         return <Loading />
     }
 
     return (
-        <Question questionData={questions[actualQuestion]} />
+        <Question
+            questionData={questions}
+        />
     )
 }
