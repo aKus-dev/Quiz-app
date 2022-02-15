@@ -1,6 +1,80 @@
 .container {
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-image: url(../../../public/img/bg.png);
-    background-size: cover;
+    // Este lo uso en el QuizContainer - Temporal
+    color: black;
 }
+
+.infoContainer {
+    color: var(--white);
+    height: 45vh;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/img/bg-questions.png);
+    background-size: cover;
+    border-radius: 0 0 50% 50%;
+
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & .question {
+        width: 90%;
+        max-width: 70rem;
+        overflow-wrap: break-word;
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        @media (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+
+    & .counter {
+        font-size: 1.8rem;
+    }
+}
+
+.aswnersContainer {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 60rem;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+
+    p {
+        text-align: center;
+        font-size: 1.45rem;
+        color: #1f1e1ee1;
+    }
+}
+
+.answerBtn,
+.nextBtn {
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    border: 2px solid #aaaca9;
+    border-radius: 5rem;
+}
+
+.nextBtn {
+    border-color: #0084ff;
+    color: #0084ff;
+    font-weight: bold;
+}
+
+.correct {
+    border-color: #40e417;
+}
+
+.incorrect {
+    border-color: #be2206;
+}
+
