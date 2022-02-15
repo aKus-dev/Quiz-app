@@ -1,23 +1,36 @@
+import { decodeEntities } from '../../helpers/decodeEntity';
+import { QuestionsResponse } from '../../helpers/getQuestions';
 import styles from '../../scss/QuizScreen/quiz.module.scss';
 
-export const Question = () => {
+interface QuestionProps {
+    questionData: QuestionsResponse;
+}
+
+export const Question = ({ questionData }: QuestionProps) => {
+
+    const { question, indexCorrect, answers, type } = questionData;
+
+    const questionFormated = decodeEntities(question);
+
     return (
         <div className={styles.questionContainer}>
 
             <div className={styles.infoContainer}>
                 <span className={styles.counter}>1/10</span>
-                <h1 className={styles.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae numas?</h1>
+                <h1 className={styles.question}>{questionFormated}</h1>
             </div>
 
 
             <div className={styles.aswnersContainer}>
                 <p>Select the correct answer</p>
-                <button className={styles.answerBtn}>Respuesta 1</button>
-                <button className={styles.answerBtn}>Respuesta 1</button>
-                <button className={styles.answerBtn}>Respuesta 1</button>
-                <button className={styles.answerBtn}>Respuesta 1</button>
 
-                <button className={styles.nextBtn}>Next</button>
+                {
+                    answers.map(answer => (
+                        <button className={styles.answerBtn}>{answer}</button>
+                    ))
+                }
+
+             {/*    <button className={styles.nextBtn}>Next</button> */}
             </div>
         </div>
     )

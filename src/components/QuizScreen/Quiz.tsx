@@ -8,6 +8,7 @@ export const Quiz = () => {
     
     const [questions, setQuestions] = useState<QuestionsResponse[]>({} as QuestionsResponse[])
     const { difficulty, category } = useContext(QuizContext);
+    const [actualQuestion, setActualQuestion] = useState(0);
 
     useEffect(
         () => {
@@ -22,6 +23,6 @@ export const Quiz = () => {
     }
 
     return (
-        <Question />
+        <Question questionData={questions[actualQuestion]} />
     )
 }
