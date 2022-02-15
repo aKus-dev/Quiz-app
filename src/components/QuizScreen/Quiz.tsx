@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
+import { Loading } from '../';
 import { QuizContext } from "../../context/QuizContext"
 import { getQuestions } from '../../helpers/getQuestions';
 
@@ -16,6 +17,10 @@ export const Quiz = () => {
                 .then(data => setQuestions(data))
         }, []
     )
+
+    if(JSON.stringify(questions) === '{}') {
+        return <Loading />
+    }
 
     return (
         <div>
