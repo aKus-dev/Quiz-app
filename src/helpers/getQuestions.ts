@@ -1,12 +1,51 @@
 import axios from 'axios';
 import { QuizResponse } from '../interfaces/apis/quiz';
 
-export const getQuestions = async (difficulty:string, category:number) => {
-    
+
+type TypeOfQuestion = 'multiple' | 'boolean';
+
+export interface QuestionsResponse {
+    question: string;
+    type: TypeOfQuestion;
+    indexCorrect: number;
+    answers: string[];
+}
+
+export const getQuestions = async (difficulty: string, category: number) => {
+
     difficulty = difficulty.toLowerCase();
     const url = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`
 
-    const  { data } = await axios.get<QuizResponse>(url);
+    const { data } = await axios.get<QuizResponse>(url);
 
-    return data.results;
+    const questionsArray:QuestionsResponse[] = data.results.map(result => {
+
+        let indexCorrect = 0;
+        const question = result.question;
+        const type: TypeOfQuestion = result.type;
+        const correct = result.correct_answer;
+        const answers = result.incorrect_answers;
+
+        if (type === 'boolean') {
+            indexCorrect = Math.round(Math.random() * 1);
+        } else {
+            indexCorrect = Math.round(Math.random() * 3);
+        }
+
+        /* answers (inicialmente de respuestas incorrectas) le agrego la respusta correcta
+         Esto lo hago porque tengo el index de la respuesta correcta
+         */
+        answers.splice(indexCorrect, 0, correct);
+
+        return {
+            question,
+            type,
+            indexCorrect,
+            answers
+        }
+
+    })
+
+
+    return questionsArray;
 }

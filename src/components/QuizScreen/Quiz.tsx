@@ -1,14 +1,11 @@
 import { useContext, useState, useEffect } from 'react';
 import { Loading } from '../';
 import { QuizContext } from "../../context/QuizContext"
-import { getQuestions } from '../../helpers/getQuestions';
-
-//TODO  Tengo las preguntas en questions, crear componentes y mostrarlas al usuario
-
+import { getQuestions, QuestionsResponse } from '../../helpers/getQuestions';
 
 export const Quiz = () => {
-
-    const [questions, setQuestions] = useState({})
+    
+    const [questions, setQuestions] = useState<QuestionsResponse[]>({} as QuestionsResponse[])
     const { difficulty, category } = useContext(QuizContext);
 
     useEffect(
@@ -17,6 +14,7 @@ export const Quiz = () => {
                 .then(data => setQuestions(data))
         }, []
     )
+
 
     if(JSON.stringify(questions) === '{}') {
         return <Loading />

@@ -16,6 +16,7 @@ export { Category } from "./CategoryScreen/Category";
 // Quiz screen components
 export { QuizContainer } from "./QuizScreen/QuizContainer";
 export { Quiz } from "./QuizScreen/Quiz";
+export { Question } from "./QuizScreen/Question";
 
 // Utilities
 export { Loading } from "./utilities/Loading";
