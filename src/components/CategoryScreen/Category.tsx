@@ -1,4 +1,4 @@
-import styles from '../../scss/CateogryScreen/category.module.scss';
+import styles from '../../scss/CategoryScreen/category.module.scss';
 import { CategoryProps } from '../../interfaces/Category';
 import { iFadeinL, aFadeinL, tFadeinL } from '../../animations';
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-import styles from '../../scss/CateogryScreen/category.module.scss';
+import styles from '../../scss/CategoryScreen/category.module.scss';
 
 interface CategoryContainerProps {
   children: JSX.Element | JSX.Element[] | string;
