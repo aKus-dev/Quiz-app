@@ -19,6 +19,12 @@ export const Difficulty = () => {
     () => {
       setTimeout(() => setDealy1(0), 350)
       setTimeout(() => setDealy2(0), 650)
+
+      return () => {
+        setDealy1(0);
+        setDealy2(0);
+      }
+
     }, [setDealy1, setDealy2]
   )
 
