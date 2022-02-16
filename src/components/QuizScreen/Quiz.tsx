@@ -13,7 +13,7 @@ export const Quiz = () => {
         () => {
             getQuestions(difficulty!, category!)
                 .then(data => setQuestions(data))
-        }, []
+        }, [difficulty, category]
     )
 
 
