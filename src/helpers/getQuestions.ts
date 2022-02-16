@@ -1,15 +1,6 @@
 import axios from 'axios';
+import { QuestionsResponse, TypeOfQuestion } from '../interfaces/apis/questions';
 import { QuizResponse } from '../interfaces/apis/quiz';
-
-
-type TypeOfQuestion = 'multiple' | 'boolean';
-
-export interface QuestionsResponse {
-    question: string;
-    type: TypeOfQuestion;
-    indexCorrect: number;
-    answers: string[];
-}
 
 export const getQuestions = async (difficulty: string, category: number) => {
 

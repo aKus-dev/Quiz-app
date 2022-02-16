@@ -1,8 +1,10 @@
 import { useContext, useState, useEffect } from 'react';
 import { Loading } from '../';
 import { QuizContext } from "../../context/QuizContext"
-import { getQuestions, QuestionsResponse } from '../../helpers/getQuestions';
+import { QuestionsResponse } from '../../interfaces/apis/questions';
+import { getQuestions } from '../../helpers/getQuestions';
 import { Question } from '../';
+
 
 export const Quiz = () => {
 
@@ -13,7 +15,13 @@ export const Quiz = () => {
         () => {
             getQuestions(difficulty!, category!)
                 .then(data => setQuestions(data))
+
+            return () => {
+                setQuestions([])
+            }
+
         }, [difficulty, category]
+
     )
 
 
