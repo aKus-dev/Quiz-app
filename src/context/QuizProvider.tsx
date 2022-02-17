@@ -1,5 +1,4 @@
 import { QuizContext, Difficulties } from './QuizContext';
-import { Categories } from '../interfaces/Category';
 import { useState } from 'react';
 
 interface QuizProviderProps {

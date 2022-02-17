@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import { Categories } from "../interfaces/Category";
 
 interface QuizContextProps {
     difficulty: Difficulties | null;

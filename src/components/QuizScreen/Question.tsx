@@ -45,7 +45,11 @@ export const Question = ({ questionData }: QuestionProps) => {
                             onClick={handleNextQuestion}
                             className={styles.nextBtn}
                         >
-                            Next
+                            {
+                                actualQuestion !== 9 
+                                    ? 'Next'
+                                    : 'See results'
+                            }
                         </button>
                     )
                 }
