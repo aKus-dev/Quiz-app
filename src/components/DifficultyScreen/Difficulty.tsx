@@ -14,15 +14,18 @@ export const Difficulty = () => {
   // Reset buttons delay after render
   const [delay1, setDealy1] = useState(0.35);
   const [delay2, setDealy2] = useState(0.65);
+  const [delay3, setDealy3] = useState(0.95);
 
   useEffect(
     () => {
       setTimeout(() => setDealy1(0), 350)
       setTimeout(() => setDealy2(0), 650)
+      setTimeout(() => setDealy3(0), 950)
 
       return () => {
         setDealy1(0);
         setDealy2(0);
+        setDealy3(0);
       }
 
     }, [setDealy1, setDealy2]
@@ -41,11 +44,17 @@ export const Difficulty = () => {
 
   return (
     <>
+      <motion.h1
+        initial={iFadeinB}
+        animate={aFadeinB}
+        transition={{ ...tFadeinB, delay: 0 }}
+        className={styles.heading}>Select difficulty</motion.h1>
+
       <motion.button
         onClick={handleDificulty}
         initial={iFadeinB}
         animate={aFadeinB}
-        transition={{ ...tFadeinB, delay: 0 }}
+        transition={{ ...tFadeinB, delay: delay1 }}
         whileHover={{
           backgroundColor: "#5951d4",
           color: "#FFFFFF"
@@ -60,7 +69,7 @@ export const Difficulty = () => {
         onClick={handleDificulty}
         initial={iFadeinB}
         animate={aFadeinB}
-        transition={{ ...tFadeinB, delay: delay1 }}
+        transition={{ ...tFadeinB, delay: delay2 }}
         whileHover={{
           backgroundColor: "#3930c2",
           color: "#FFFFFF"
@@ -75,7 +84,7 @@ export const Difficulty = () => {
         onClick={handleDificulty}
         initial={iFadeinB}
         animate={aFadeinB}
-        transition={{ ...tFadeinB, delay: delay2 }}
+        transition={{ ...tFadeinB, delay: delay3 }}
         whileHover={{
           backgroundColor: "#211c70",
           color: "#FFFFFF"

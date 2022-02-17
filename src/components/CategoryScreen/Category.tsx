@@ -12,7 +12,7 @@ export const Category = ({ color, categoryName, id }: CategoryProps) => {
 
     const navigate = useNavigate();
 
-    const { setCategory } = useContext(QuizContext);
+    const { setCategory, difficulty } = useContext(QuizContext);
 
     const handleCategory = () => {
         setCategory(id);
@@ -29,7 +29,7 @@ export const Category = ({ color, categoryName, id }: CategoryProps) => {
             transition={tFadeinL}
             className={`${styles[color]} ${styles.categoryCard}`}
         >
-            <p className={styles.difficulty}>Easy</p>
+            <p className={styles.difficulty}>{difficulty}</p>
             <h2 className={styles.categoryName}>{categoryName}</h2>
 
             <img

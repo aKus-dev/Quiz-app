@@ -16,3 +16,6 @@ A quiz app to have some fun and learn
 * Sports
 * Maths
 * Film
+* Computers
+* Science 
+* Geography

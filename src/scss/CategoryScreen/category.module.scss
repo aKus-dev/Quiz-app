@@ -6,6 +6,8 @@
     padding: 5rem 2rem;
 
     display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
     justify-content: center;
     align-items: center;
 }
@@ -83,4 +85,16 @@
 
 .black {
     background: linear-gradient(135deg, #080808, #464545);
+}
+
+.aqua {
+    background: linear-gradient(135deg, #31c2af, #415267);
+}
+
+.skyblue {
+    background: linear-gradient(135deg, #5df0f0, #2470e2);
+}
+
+.red {
+    background: linear-gradient(135deg, #fe6b5e, #f1aba5);
 }

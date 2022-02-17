@@ -30,13 +30,30 @@ export const categories: CategoryProps[] = [
         id: 21
     },
     {
+        categoryName: 'Geography',
+        color: 'red',
+        id: 22
+    },
+
+    {
+        categoryName: 'Film',
+        color: 'black',
+        id: 11
+    },
+
+    {
         categoryName: 'Maths',
         color: 'blue',
         id: 19
     },
     {
-        categoryName: 'Film',
-        color: 'black',
-        id: 11
+        categoryName: 'Computers',
+        color: 'aqua',
+        id: 18
+    },
+    {
+        categoryName: 'Science',
+        color: 'skyblue',
+        id: 17
     }
 ];

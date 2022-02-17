@@ -12,6 +12,9 @@ export type Categories =
     | 'Music'
     | 'Sports'
     | 'Videogames'
+    | 'Computers'
+    | 'Geography'
+    | 'Science'
 
 
 type Colors = 
@@ -21,4 +24,7 @@ type Colors =
     | 'violet'
     | 'blue'
     | 'black'
+    | 'aqua'
+    | 'red'
+    | 'skyblue'
 

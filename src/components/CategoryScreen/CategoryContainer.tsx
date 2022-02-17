@@ -1,7 +1,7 @@
 import styles from '../../scss/CategoryScreen/category.module.scss';
 
 interface CategoryContainerProps {
-  children: JSX.Element | JSX.Element[] | string;
+  children: JSX.Element | JSX.Element[];
 }
 
 export const CategoryContainer = ({ children }: CategoryContainerProps) => {
