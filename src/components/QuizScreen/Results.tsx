@@ -4,10 +4,13 @@ import { QuizContext } from '../../context/QuizContext';
 import { generateData } from '../../helpers/generateData';
 
 import Faq from "react-faq-component";
+import { Navigate } from 'react-router-dom';
 
 export const Results = () => {
 
   const { questions } = useContext(QuizContext);
+
+  if(!questions) return <Navigate to="/" />
 
   const data = generateData(questions!);
 
