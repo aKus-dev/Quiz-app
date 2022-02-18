@@ -3,7 +3,6 @@ export interface QuestionProps {
     questionData: QuestionsResponse[];
 }
 
-
 export interface QuestionsResponse {
     question: string;
     type: TypeOfQuestion;
