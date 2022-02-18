@@ -1,11 +1,14 @@
 import '../../scss/global/_global.scss';
 import styles from '../../scss/QuizScreen/quiz.module.scss';
 import { decodeEntities } from '../../helpers/decodeEntity';
-import { QuestionProps } from '../../interfaces/apis/questions';
 import { useQuiz } from '../../hooks/useQuiz';
+import { QuizContext } from '../../context/QuizContext';
+import { useContext } from 'react';
 
 
-export const Question = ({ questionData }: QuestionProps) => {
+export const Question = () => {
+
+    const { questions } = useContext(QuizContext)
 
     const {
         handleQuestion,
@@ -14,7 +17,7 @@ export const Question = ({ questionData }: QuestionProps) => {
         questionFormated,
         answers,
         answered
-    } = useQuiz(questionData);
+    } = useQuiz(questions!);
 
     return (
         <div className={styles.questionContainer}>

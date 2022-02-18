@@ -2,9 +2,12 @@ import styles from '../scss/QuizScreen/quiz.module.scss';
 import { QuestionsResponse } from '../interfaces/apis/questions';
 import { decodeEntities } from '../helpers/decodeEntity';
 import { MouseEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export const useQuiz = (questionData: QuestionsResponse[]) => {
+
+    const navigate = useNavigate();
 
     const [actualQuestion, setActualQuestion] = useState(0);
     const [buttonClickedId, setButtonClickedId] = useState(0);
@@ -24,7 +27,7 @@ export const useQuiz = (questionData: QuestionsResponse[]) => {
             setActualQuestion(actualQuestion + 1);
             setAnswered(false);
         } else {
-            // TODO Show results
+            navigate('/results')
         }
     }
 

@@ -1,6 +1,21 @@
-.container {
-    // Este lo uso en el QuizContainer - Temporal
-    color: black;
+.resultsContainer {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/img/bg-questions.png);
+    background-size: cover;
+    padding: 5rem 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answerContainer {
+    background-color: var(--white);
+    width: 90%;
+    max-width: 80rem;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .infoContainer {
@@ -76,9 +91,9 @@
 }
 
 .correct {
-    border: 2px solid #40e417!important;
+    border: 2px solid #40e417 !important;
 }
 
 .incorrect {
-    border: 2px solid #be2206!important;
+    border: 2px solid #be2206 !important;
 }

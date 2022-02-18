@@ -6,7 +6,7 @@ export const CategoryScreen = () => {
     <CategoryContainer>
       {
         categories.map(({ categoryName, color, id }) => (
-          <Category categoryName={categoryName} color={color} id={id} />
+          <Category key={id} categoryName={categoryName} color={color} id={id} />
         ))
       }
     </CategoryContainer>

@@ -1,6 +1,3 @@
-
-
-
 // Welcome screen components
 export { Welcome } from "./WelcomeScreen/Welcome";
 export { WelcomeContainer } from "./WelcomeScreen/WelcomeContainer";
@@ -17,6 +14,8 @@ export { Category } from "./CategoryScreen/Category";
 export { QuizContainer } from "./QuizScreen/QuizContainer";
 export { Quiz } from "./QuizScreen/Quiz";
 export { Question } from "./QuizScreen/Question";
+export { Results } from './QuizScreen/Results';
+
 
 // Utilities
 export { Loading } from "./utilities/Loading";
