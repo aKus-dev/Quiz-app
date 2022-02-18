@@ -55,6 +55,7 @@
 
 .answerBtn,
 .nextBtn {
+    transition: 0.25s;
     cursor: pointer;
     font-size: 1.6rem;
     padding: 1rem;
@@ -62,6 +63,10 @@
     background: transparent;
     border: 2px solid #aaaca9;
     border-radius: 5rem;
+}
+
+.answerBtn:hover {
+    border-color: darken(#aaaca9, 40%);
 }
 
 .nextBtn {
