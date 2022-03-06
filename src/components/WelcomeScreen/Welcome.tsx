@@ -22,7 +22,7 @@ export const Welcome = () => {
                     transition={tPopup}
                     className={styles.heading}
                 >
-                    Quizz App
+                    Quiz App
                 </motion.h1>
 
                 <motion.p
